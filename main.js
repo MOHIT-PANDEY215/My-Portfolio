@@ -20,3 +20,46 @@ function opentab(tabname){
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab")
 }
+
+function toggleNavMenu() {
+    const navMenu = document.getElementById("navMenu");
+    
+    navMenu.classList.toggle("show");
+    if(navMenu.className=='show'){
+        document.body.style.overflow='hidden'
+    }
+    else{
+        
+        document.body.style.overflow='auto'
+    }
+    
+}
+
+function togglePlus(){
+    const menuIcon = document.getElementById("menuIcon");
+    const closeIcon = document.getElementById("closeIcon");
+
+    menuIcon.classList.remove('show');
+    closeIcon.classList.add('show');
+}
+
+function toggleCross(){
+    const menuIcon = document.getElementById("menuIcon");
+    const closeIcon = document.getElementById("closeIcon");
+
+    closeIcon.classList.remove('show');
+    menuIcon.classList.add('show');
+}
+
+function removeBg(){
+    
+    const navMenu = document.getElementById("navMenu");
+    const menuIcon = document.getElementById("menuIcon");
+    const closeIcon = document.getElementById("closeIcon");
+
+    navMenu.classList.remove('show');
+    document.body.style.overflow='auto'
+    closeIcon.classList.remove('show');
+    menuIcon.classList.add('show');
+
+}
